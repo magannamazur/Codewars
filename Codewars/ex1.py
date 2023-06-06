@@ -31,7 +31,7 @@ def validate_hello(greetings):
             return True
     return False
 
-
+#fast check
 ans= validate_hello('hombre! Hola!')
 print(ans)
 
