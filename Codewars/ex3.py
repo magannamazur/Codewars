@@ -19,6 +19,19 @@ def reverse_wordsmy(text):
     rew_list =rew_list[:l-1]
     return rew_list
 
+def reverse_wordsmymidle(text):
+    rew_list = []
+    for i in text.split(" "):
+        rew_word = i[::-1]
+        rew_list.append(rew_word)
+    return " ".join(rew_list)
+
+def reverse_wordsshortest(text):
+  return ' '.join([ word[::-1] for word in text.split(' ')])
+
+a = reverse_wordsmymidle("hi yo")
+print(a)
+
 import unittest
 
 class testex3(unittest.TestCase):
