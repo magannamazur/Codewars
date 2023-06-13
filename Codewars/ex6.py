@@ -25,6 +25,8 @@ def descending_ordermy(num):
 
 def Descending_Order(num):
     return int("".join(sorted(str(num), reverse=True)))
+# join zwraca str
+
 
 import unittest
 
