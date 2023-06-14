@@ -97,3 +97,32 @@ print(macierz[:,2:])
 # [o o x x x]
 # [o o x x x]
 # [o o x x x]
+
+# generowanie losowych liczb
+s = np.random.random(10) # zwraca 10 licz z przedzialu 0-1
+print(s)
+
+# losowa liczba z rozkladu normalnego
+n = np.random.normal()
+print(n)
+
+# losowa liczba z rozkladu jednostajnego
+u = np.random.uniform()
+print(u)
+
+# opcja dla liczb całkowitych, z powtórzeniami
+r = np.random.randint(0, 100, size=10)
+print(r)
+# [82 14 44 54 62 40 82 52 59 75]
+
+wektor = np.array([20, 17, 67, 456, 100, 6, 12.5])
+
+# wskazanie miejsca szukanych wektorow
+wektor_wieksze_od_99 = np.where(wektor > 99)
+print(wektor_wieksze_od_99)
+# (array([3, 4], dtype=int64),)
+
+# szukane liczby
+sz = wektor[wektor_wieksze_od_99]
+print(sz)
+[456. 100.]
