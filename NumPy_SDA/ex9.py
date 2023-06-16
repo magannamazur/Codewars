@@ -3,7 +3,7 @@
 # postaci numpy tablicy, a zwróci odległość euklidesową między nimi
 
 import numpy as np
-def euklides_diff(arr1,arr2) -> float:
+def euklides_diff(arr1: np.ndarray,arr2: np.ndarray) -> float:
     return np.sqrt(sum((arr1 - arr2) ** 2))
 
 u_1 = np.array([1, 3, 5, 2, 0])
