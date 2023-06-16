@@ -125,4 +125,87 @@ print(wektor_wieksze_od_99)
 # szukane liczby
 sz = wektor[wektor_wieksze_od_99]
 print(sz)
-[456. 100.]
+# [456. 100.]
+
+# dzialania na macierzach
+
+matrix1 = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+matrix2 = np.array([
+    [10, 10, 10],
+    [20, 20, 20],
+    [30, 30, 30]
+])
+
+# dodawanie macierzy
+
+add = np.add(matrix1, matrix2)
+print(add)
+# [[11 12 13]
+#  [24 25 26]
+#  [37 38 39]]
+
+add1 = matrix1 + matrix2
+
+# odejmnowanie macierzy
+
+sub = np.subtract(matrix2,matrix1)
+print(sub)
+# [[ 9  8  7]
+#  [16 15 14]
+#  [23 22 21]]
+
+sub1 = matrix2 + matrix1
+
+#mnozenie macierzy
+
+mno = matrix1 * matrix2
+
+mno10 = matrix1 * 10
+
+mnowektor = matrix1 * np.array([10,20,30])
+
+print(mno)
+print(mno10)
+print(mnowektor)
+
+# transpozycja maciezy
+
+tra = matrix1.T
+print(tra)
+
+# macierz odwrotna***
+C = np.array([[1,4],[2,5]])
+od = np.linalg.inv(C)
+print(od)
+
+# zmiana ksztaltu macierzy
+r = matrix1.reshape(1,9)
+print(r)
+# [[1 2 3 4 5 6 7 8 9]]
+
+# wyxnaczanie glownej przekatnej
+d = matrix1.diagonal()
+print(d)
+# [1 5 9]
+
+# spłaszczanie macierzy
+f = matrix1.flatten()
+print(f)
+# [1 2 3 4 5 6 7 8 9]
+
+print(type(f))
+print(type(r))
+print(np.max(matrix1))
+print(np.min(matrix1))
+print(np.mean(matrix1))
+print(np.var(matrix1))
+print(np.std(matrix1))
+
+# jednostkowa macierz
+iden = np.identity(3)
+print(iden)
