@@ -203,8 +203,8 @@ print(type(r))
 print(np.max(matrix1))
 print(np.min(matrix1))
 print(np.mean(matrix1))
-print(np.var(matrix1))
-print(np.std(matrix1))
+print(np.var(matrix1)) # wariacja
+print(np.std(matrix1)) # standardowe odchylenie
 
 # jednostkowa macierz
 iden = np.identity(3)
