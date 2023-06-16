@@ -10,3 +10,7 @@ where = np.where(f>100)
 print(where)
 done = f[where]
 print(done)
+
+# szybkie
+fast = f[np.where(f>100)]
+print(fast)
