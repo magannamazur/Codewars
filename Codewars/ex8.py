@@ -32,6 +32,10 @@ import math
 def is_squarefast(n):
     return n > -1 and math.sqrt(n) % 1 == 0;
 
+
+def is_squareother(n):
+    return n >= 0 and (n**0.5) % 1 == 0
+
 import unittest
 
 class testex8(unittest.TestCase):
