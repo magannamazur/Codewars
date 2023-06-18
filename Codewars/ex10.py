@@ -17,6 +17,21 @@ def delete_nth(order,max_e):
             list.append(e)
     return list
 
+
+def delete_nthsz(order, max_e):
+    ans = []
+    for o in order:
+        if ans.count(o) < max_e: ans.append(o)
+    return ans
+
+def delete_nthbest(order,max_e):
+    return [o for i,o in enumerate(order) if order[:i].count(o)<max_e ]
+
+# i = index  0,1,2,3..
+# o = element
+
+
+
 import unittest
 
 class testex10(unittest.TestCase):
