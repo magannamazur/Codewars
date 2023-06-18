@@ -21,8 +21,8 @@ def digitizefast(n):
 
 import unittest
 
-class testex8(unittest.TestCase):
-    def test_ex8(self):
+class testex9(unittest.TestCase):
+    def test_ex9(self):
         self.assertEqual(digitize(35231),[1,3,2,5,3])
         self.assertEqual(digitize(23582357),[7,5,3,2,8,5,3,2])
         self.assertEqual(digitize(548702838394),[4,9,3,8,3,8,2,0,7,8,4,5])
