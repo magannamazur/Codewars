@@ -205,7 +205,13 @@ print(np.min(matrix1))
 print(np.mean(matrix1))
 print(np.var(matrix1)) # wariacja
 print(np.std(matrix1)) # standardowe odchylenie
+print(np.sqrt(matrix1)) # pierwiastek
 
 # jednostkowa macierz
 iden = np.identity(3)
 print(iden)
+# [[1. 0. 0.]
+#  [0. 1. 0.]
+#  [0. 0. 1.]]
+
+# normalizacja  - tj. od każdego elementu tablicy odejmij średnią i podziel przez odchylenie standardowe
