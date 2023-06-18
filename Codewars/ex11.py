@@ -19,6 +19,16 @@ def persistence(n):
         iloraz = ilorazz
     return count
 
+from functools import reduce
+import operator
+
+def persistencefast(n):
+    i = 0
+    while n>=10:
+        n=reduce(operator.mul,[int(x) for x in str(n)],1)
+        i+=1
+    return i
+
 import unittest
 
 class testex11(unittest.TestCase):
