@@ -23,6 +23,10 @@ def multiple_of_index(arr):
             index += 1
     return l
 
+def multiple_of_indexmyfast(arr):
+    return [o for i,o in enumerate(arr) if i> 0 and o%i ==0 or o==0]
+
+
 import unittest
 class testex14(unittest.TestCase):
     def test_ex14(self):
