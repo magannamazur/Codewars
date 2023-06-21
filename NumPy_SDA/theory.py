@@ -159,7 +159,7 @@ print(sub)
 #  [16 15 14]
 #  [23 22 21]]
 
-sub1 = matrix2 + matrix1
+sub1 = matrix2 - matrix1
 
 #mnozenie macierzy
 
