@@ -14,3 +14,8 @@ print(done)
 # szybkie
 fast = f[np.where(f>100)]
 print(fast)
+
+# szybsze
+q = np.array([3,4,5,100,123,1234])
+print(q>100)
+print(q[q>100])
