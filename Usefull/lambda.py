@@ -5,6 +5,7 @@ print(result)
 
 numbersSquare = set(result)
 print(numbersSquare)
+# {16, 1, 4, 9}
 
 # A lambda function is a small anonymous function.
 
