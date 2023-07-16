@@ -87,4 +87,27 @@ a = np.array([5, 7, 9, 8, 6, 4, 5])
 b = np.array([6, 3, 4, 8, 9, 7, 1])
 #> array([ 6.,  7.,  9.,  8.,  9.,  7.,  5.])
 pair_max(a, b)
-print(pair_max(a, b))
+
+# 16. How to swap two columns in a 2d numpy array?
+# Q. Swap columns 1 and 2 in the array arr.
+
+arr = np.arange(9).reshape(3,3)
+b = arr[:, [1,0,2]]
+
+#> array([[1, 0, 2],
+#>        [4, 3, 5],
+#>        [7, 6, 8]])
+
+# 17. How to swap two rows in a 2d numpy array?
+# Q. Swap rows 1 and 2 in the array arr:
+
+arr = np.arange(9).reshape(3,3)
+b = arr[[1,0,2], :]
+
+# 18. How to reverse the rows of a 2D array?
+# Q. Reverse the rows of a 2D array
+
+arr = np.arange(9).reshape(3,3)
+b = arr[[2,1,0], :]
+c = arr[::-1]
+print(b)
