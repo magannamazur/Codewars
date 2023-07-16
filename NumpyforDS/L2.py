@@ -80,6 +80,7 @@ def maxx(x, y):
     else:
         return y
 
+# Returns an object that acts like pyfunc, but takes arrays as input.
 pair_max = np.vectorize(maxx, otypes=[float])
 
 a = np.array([5, 7, 9, 8, 6, 4, 5])
