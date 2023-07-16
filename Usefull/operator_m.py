@@ -17,7 +17,7 @@ print(functools.reduce(operator.add, lis))
 
 # using reduce to compute product
 # using operator functions
-print("The product of list elements is : ", end="")
+print("The multiply of list elements is : ", end="")
 print(functools.reduce(operator.mul, lis))
 
 # using reduce to concatenate string
