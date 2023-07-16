@@ -37,4 +37,53 @@ a = np.array([1,2,3,2,3,4,3,4,5,6])
 b = np.array([7,2,10,2,7,4,9,4,9,8])
 
 c = np.intersect1d(a,b)
-print(c)
+
+# 12. How to remove from one array those items that exist in another?
+# Q. From array a remove all items present in array b
+
+a = np.array([1,2,3,4,5])
+b = np.array([5,6,7,8,9])
+
+c = np.setdiff1d(a,b)
+
+# 13. How to get the positions where elements of two arrays match?
+# Q. Get the positions where elements of a and b match
+
+a = np.array([1,2,3,2,3,4,3,4,5,6])
+b = np.array([7,2,10,2,7,4,9,4,9,8])
+
+c = np.where(a ==b)
+
+# 14. How to extract all numbers between a given range from a numpy array?
+# Q. Get all items between 5 and 10 from a.
+
+a = np.array([2, 6, 1, 9, 10, 3, 27])
+
+# Method 1
+index = np.where((a >= 5) & (a <= 10))
+c= a[index]
+
+# Method 2:
+index = np.where(np.logical_and(a>=5, a<=10))
+c = a[index]
+
+# Method 3: (thanks loganzk!)
+c = a[(a >= 5) & (a <= 10)]
+
+# 15. How to make a python function that handles scalars to work on numpy arrays?
+# Q. Convert the function maxx that works on two scalars, to work on two arrays.
+
+def maxx(x, y):
+    """Get the maximum of two items"""
+    if x >= y:
+        return x
+    else:
+        return y
+
+pair_max = np.vectorize(maxx, otypes=[float])
+
+a = np.array([5, 7, 9, 8, 6, 4, 5])
+b = np.array([6, 3, 4, 8, 9, 7, 1])
+#> array([ 6.,  7.,  9.,  8.,  9.,  7.,  5.])
+pair_max(a, b)
+print(pair_max(a, b))
