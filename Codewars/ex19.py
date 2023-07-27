@@ -16,6 +16,9 @@ def accum(s):
         num+=1
     return "-".join(st)
 
+def accumfast(s):
+    return '-'.join(c.upper() + c.lower() * i for i, c in enumerate(s))
+
 import unittest
 class testex18(unittest.TestCase):
     def test_ex18(self):
