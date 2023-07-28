@@ -104,10 +104,32 @@ b = arr[:, [1,0,2]]
 arr = np.arange(9).reshape(3,3)
 b = arr[[1,0,2], :]
 
+# [[3 4 5]
+#  [0 1 2]
+#  [6 7 8]]
+
 # 18. How to reverse the rows of a 2D array?
 # Q. Reverse the rows of a 2D array
 
 arr = np.arange(9).reshape(3,3)
 b = arr[[2,1,0], :]
 c = arr[::-1]
-print(b)
+
+# 19. How to reverse the columns of a 2D array?
+# Q. Reverse the columns of a 2D array arr.
+
+arr = np.arange(9).reshape(3,3)
+b = arr[:, ::-1]
+
+# 20. How to create a 2D array containing random floats between 5 and 10?
+# Q. Create a 2D array of shape 5x3 to contain random decimal numbers between 5 and 10
+arr = np.random.randint(5, 11, size=15).reshape(5,3)
+
+# 25. How to import a dataset with numbers and texts keeping the text intact in python numpy?
+# Q. Import the iris dataset keeping the text intact.
+
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris = np.genfromtxt(url, delimiter=',', dtype='object')
+names = ('sepallength', 'sepalwidth', 'petallength', 'petalwidth', 'species')
+
+print(iris[:3])

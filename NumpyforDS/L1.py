@@ -47,3 +47,32 @@ arr = np.arange(10)
 arr = arr.reshape(2,5)
 
 arr = arr.reshape(2, -1)  # Setting to -1 automatically decides the number of cols
+
+# 21. How to print only 3 decimal places in python numpy array?
+# Q. Print or show only 3 decimal places of the numpy array
+
+rand_arr = np.random.random((5,3))
+# rand_arr = np.random.random([5,3])
+b = np.around(rand_arr, 3)
+# np.set_printoptions(precision=3)
+
+# 22. How to pretty print a numpy array by suppressing the scientific notation (like 1e10)?
+# Q. Pretty print
+
+np.random.seed(100)
+rand_arr = np.random.random([3,3])/1e3
+# np.set_printoptions(suppress=True, precision=6)
+
+
+# 23. How to limit the number of items printed in output of numpy array?
+# Q. Limit the number of items printed in python numpy array a to a maximum of 6 elements.
+
+a = np.arange(15)
+np.set_printoptions(threshold = 6)
+print(a)
+
+# 24. How to print the full numpy array without truncating
+# Q. Print the full numpy array a without truncating.
+import sys
+np.set_printoptions(threshold=sys.maxsize)
+print(a)
