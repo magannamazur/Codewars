@@ -76,3 +76,11 @@ print(a)
 import sys
 np.set_printoptions(threshold=sys.maxsize)
 print(a)
+
+# 31. How to find the percentile scores of a numpy array?
+# Q. Find the 5th and 95th percentile of iris's sepallength
+
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+sepallength = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0])
+
+np.percentile(sepallength, q=[5, 95])

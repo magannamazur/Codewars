@@ -131,5 +131,71 @@ arr = np.random.randint(5, 11, size=15).reshape(5,3)
 url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
 iris = np.genfromtxt(url, delimiter=',', dtype='object')
 names = ('sepallength', 'sepalwidth', 'petallength', 'petalwidth', 'species')
-
 print(iris[:3])
+
+# 26. How to extract a particular column from 1D array of tuples?
+# Q. Extract the text column species from the 1D iris imported in previous question.
+
+species = np.array([row[4] for row in iris])
+# print(species[:5])
+# print(iris[:,4])
+
+# 27. How to convert a 1d array of tuples to a 2d numpy array?
+# Q. Convert the 1D iris to 2D array iris_2d by omitting the species text field.
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_1d = np.genfromtxt(url, delimiter=',', dtype='object')
+# Method 1: Convert each row to a list and get the first 4 items
+iris_2d = np.array([row.tolist()[:4] for row in iris_1d])
+print(iris_2d[:4])
+print(iris[:,:4])
+
+# Alt Method 2: Import only the first 4 columns from source url
+iris_2d = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0,1,2,3])
+print(iris_2d[:4])
+
+# 28. How to compute the mean, median, standard deviation of a numpy array?
+# Q. Find the mean, median, standard deviation of iris's sepallength (1st column)
+
+sepallength = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0])
+mu, med, sd = np.mean(sepallength), np.median(sepallength), np.std(sepallength)
+print(mu, med, sd)
+
+# 29. How to normalize an array so the values range exactly between 0 and 1?
+# Q. Create a normalized form of iris's sepallength whose values range exactly between 0 and 1 so that
+# the minimum has value 0 and maximum has value 1.
+
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+sepallength = np.genfromtxt(url, delimiter=',', dtype='float', usecols=[0])
+Smax, Smin = sepallength.max(), sepallength.min()
+S = (sepallength - Smin)/(Smax - Smin)
+
+# 32. How to insert values at random positions in an array?
+# Q. Insert np.nan values at 20 random positions in iris_2d dataset
+
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_2d = np.genfromtxt(url, delimiter=',', dtype='object')
+
+# Method 1
+i, j = np.where(iris_2d)
+
+# i, j contain the row numbers and column numbers of 600 elements of iris_x
+np.random.seed(100)
+iris_2d[np.random.choice((i), 20), np.random.choice((j), 20)] = np.nan
+
+# Method 2
+np.random.seed(100)
+iris_2d[np.random.randint(150, size=20), np.random.randint(4, size=20)] = np.nan
+
+# Print first 10 rows
+print(iris_2d[:10])
+
+# 33. How to find the position of missing values in numpy array?
+# Q. Find the number and position of missing values in iris_2d's sepallength (1st column)
+
+# Input
+url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/iris/iris.data'
+iris_2d = np.genfromtxt(url, delimiter=',', dtype='float')
+iris_2d[np.random.randint(150, size=20), np.random.randint(4, size=20)] = np.nan
+
+print("Number of missing values: \n", np.isnan(iris_2d[:, 0]).sum())
+print("Position of missing values: \n", np.where(np.isnan(iris_2d[:, 0])))
