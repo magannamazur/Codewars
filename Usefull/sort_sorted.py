@@ -27,3 +27,8 @@ numbers = [1, 3, 4, 2]
 numbers.sort()
 
 print(numbers)
+
+def order(sentence):
+  return " ".join(sorted(sentence.split(), key=min))
+
+# key (Optional) - A function that serves as a key for the sort comparison. Defaults to None
