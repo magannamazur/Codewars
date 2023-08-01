@@ -28,6 +28,8 @@ def orderfast(sentence):
 
 def orderlambda(words):
   return ' '.join(sorted(words.split(), key=lambda w:sorted(w)))
+# 1. sorting word: 2is, 1hisT..
+# 2. sorting string
 
 import unittest
 class testex22(unittest.TestCase):
