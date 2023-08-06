@@ -32,3 +32,5 @@ def order(sentence):
   return " ".join(sorted(sentence.split(), key=min))
 
 # key (Optional) - A function that serves as a key for the sort comparison. Defaults to None
+
+
