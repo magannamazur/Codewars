@@ -38,3 +38,9 @@ print(sales.most_common())
 # All objects in reverse order
 print(sales.most_common()[::-1])
 # [('tomato', 4), ('banana', 15), ('orange', 30), ('apple', 39)]
+
+def count(string):
+    return Counter(string)
+
+print(count('helooo'))
+
