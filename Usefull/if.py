@@ -8,3 +8,6 @@ def get_real_floor(n):
 
 def positive_sum(arr):
     return sum(x for x in arr if x > 0)
+
+def update_light(current):
+    return 'yellow' if current =='green' else  'red' if current =='yellow'  else 'green'
