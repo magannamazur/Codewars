@@ -4,5 +4,5 @@
 result = divmod(8, 3)
 
 print('Quotient and Remainder = ',result)
-
+print(result[0])
 # Output: Quotient and Remainder =  (2, 2)
