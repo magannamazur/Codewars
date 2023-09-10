@@ -16,3 +16,6 @@ print(match)
 from re import findall
 def count_smileys(arr):
     return sum(1 for _ in findall(r"[:;][-~]?[)D]", " ".join(arr)))
+
+def shortcut( s ):
+    return re.sub('[aoeui]', '', s)
