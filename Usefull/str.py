@@ -25,3 +25,7 @@ no_votes = 43_132_495
 percentage = yes_votes / (yes_votes + no_votes)
 a = '{:-9} YES votes  {:2.2%}'.format(yes_votes, percentage)
 print(a)
+
+# %d operator is used as a placeholder to specify integer values, decimals, or numbers
+# %s specifically is used to perform concatenation of strings together
+# %f formatter is specifically used for formatting float values (numbers with decimals).
