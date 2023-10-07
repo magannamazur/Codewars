@@ -19,3 +19,8 @@ def count_smileys(arr):
 
 def shortcut( s ):
     return re.sub('[aoeui]', '', s)
+
+#check True/False
+def validate_pin(pin):
+    #return true or false
+    return bool(re.fullmatch("\d{4}|\d{6}", pin))
