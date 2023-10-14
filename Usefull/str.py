@@ -29,3 +29,6 @@ print(a)
 # %d operator is used as a placeholder to specify integer values, decimals, or numbers
 # %s specifically is used to perform concatenation of strings together
 # %f formatter is specifically used for formatting float values (numbers with decimals).
+
+def create_phone_number(n):
+	return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)

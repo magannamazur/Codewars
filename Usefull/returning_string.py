@@ -6,3 +6,6 @@ def greet(name):
 
 def greet(name):
     return "Hello, " + name + " how are you doing today?"
+
+def create_phone_number(n):
+	return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
