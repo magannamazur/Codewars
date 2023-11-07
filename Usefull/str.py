@@ -34,4 +34,7 @@ def create_phone_number(n):
 	return "({}{}{}) {}{}{}-{}{}{}{}".format(*n)
 
 def say_hello(name, city, state):
-  return "Hello, {}! Welcome to {}, {}!".format(" ".join(name), city, state)
+    return "Hello, {}! Welcome to {}, {}!".format(" ".join(name), city, state)
+
+def name_shuffler(str_):
+    return ' '.join(str_.split(' ')[::-1])
