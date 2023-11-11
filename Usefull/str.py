@@ -38,3 +38,10 @@ def say_hello(name, city, state):
 
 def name_shuffler(str_):
     return ' '.join(str_.split(' ')[::-1])
+
+def reverse_letter(string):
+    return ''.join(x for x in string if x.isalpha())[::-1]
+
+
+def spin_words(sentence):
+    return ' '.join(e[::-1] if len(e) >= 5 else e for e in sentence.split(' '))
