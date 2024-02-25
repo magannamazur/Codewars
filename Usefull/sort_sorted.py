@@ -11,7 +11,7 @@ x = sorted(b)
 print(x)
 
 # sorted() method sorts the given sequence as well as set and dictionary(which is not a sequence) either in ascending
-# order or in descending order(does unicode comparison for string char by char) and always returns the a sorted list.
+# order or in descending order(does unicode comparison for string char by char) and always returns the  sorted list.
 # This method doesn’t effect the original sequence
 # List
 x = ['q', 'w', 'r', 'e', 't', 'y']
@@ -32,5 +32,10 @@ def order(sentence):
   return " ".join(sorted(sentence.split(), key=min))
 
 # key (Optional) - A function that serves as a key for the sort comparison. Defaults to None
+
+  def first_n_smallest(arr, n):
+    lst = sorted(enumerate(arr), key=lambda it: it[1])[:n]
+    lst.sort(key=lambda it: it[0])
+    return [v for _, v in lst]
 
 
